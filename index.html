@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0d0f25">
 <title>Alok &amp; Madhu’s Celebrations</title>
+<meta name="description" content="Watch the invitation, get directions and save the date.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alok &amp; Madhu’s Celebrations">
+<meta property="og:description" content="Watch the invitation, get directions and save the date.">
+<meta property="og:image" content="https://effulgent-zabaione-b74dab.netlify.app/preview-hands.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -103,7 +111,7 @@ body {
 /* closing panel */
 .bless { font-style: italic; font-size: 21px; margin: 0; max-width: 22rem; }
 .from { margin: 26px 0 0; color: var(--ivory-dim); }
-.family { font-style: italic; font-weight: 600; font-size: 34px; margin: 2px 0 0;
+.family { font-style: italic; font-weight: 600; font-size: clamp(28px, 8vw, 34px); margin: 2px 0 0;
   background: linear-gradient(180deg, var(--gold-hi), var(--gold) 60%, var(--gold-lo)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .again { margin-top: 34px; font: inherit; font-size: 15px; color: var(--ivory); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 9px 20px; cursor: pointer; }
 
@@ -149,7 +157,7 @@ body {
     <div class="inner">
       <p class="bless">Your presence and blessings will make our celebration truly special.</p>
       <p class="from">With love and warm regards,</p>
-      <p class="family">Sharma Family</p>
+      <p class="family">Sharma &amp; Rai Family</p>
       <button class="again" type="button" id="again">Back to the top</button>
     </div>
   </section>
@@ -195,7 +203,7 @@ function visibleKeys() {
 }
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const gcal = e => 'https://calendar.google.com/calendar/render?' + new URLSearchParams({ action: 'TEMPLATE',
-  text: e.title + ' – Alok & Madhu', dates: e.gcal.join('/'), location: e.venue + ', ' + e.addr, details: 'With love and warm regards, Sharma Family' });
+  text: e.title + ' – Alok & Madhu', dates: e.gcal.join('/'), location: e.venue + ', ' + e.addr, details: 'With love and warm regards, Sharma & Rai Family' });
 const maps = e => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(e.maps);
 const go = el => el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
 
